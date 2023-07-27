@@ -1,4 +1,4 @@
-﻿using CodeChallenge.WebApi.Models;
+﻿using CodeChallenge.WebApi.Data.Models;
 
 namespace CodeChallenge.WebApi;
 

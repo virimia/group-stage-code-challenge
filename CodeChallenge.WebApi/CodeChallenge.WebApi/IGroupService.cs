@@ -2,5 +2,5 @@
 
 public interface IGroupService
 {
-    List<GeneratedGroup> Generate(int numberOfGroups, string drawMaster);
+    Task<List<GeneratedGroup>> Generate(int numberOfGroups, string drawMaster);
 }

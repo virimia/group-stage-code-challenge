@@ -1,4 +1,7 @@
 using CodeChallenge.WebApi;
+using CodeChallenge.WebApi.Data;
+using CodeChallenge.WebApi.Infrastructure.Teams;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +11,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddDbContext<AppDbContext>(opt =>
+{
+    opt.UseInMemoryDatabase("InMemDb");
+});
 
 RegisterServices(builder);
 
@@ -26,9 +33,12 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+DatabasePreparation.PrePopulate(app);
+
 app.Run();
 
 void RegisterServices(WebApplicationBuilder builder)
 {
     builder.Services.AddTransient<IGroupService, GroupService>();
+    builder.Services.AddTransient<ITeamsRepository, TeamsRepository>();
 }

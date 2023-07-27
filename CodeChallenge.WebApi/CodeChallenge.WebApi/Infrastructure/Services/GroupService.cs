@@ -1,7 +1,7 @@
 ﻿using CodeChallenge.WebApi.Infrastructure.Teams;
 using System.ComponentModel.DataAnnotations;
 
-namespace CodeChallenge.WebApi;
+namespace CodeChallenge.WebApi.Infrastructure.Services;
 
 public class GroupService : IGroupService
 {

@@ -4,6 +4,6 @@ namespace CodeChallenge.WebApi.Infrastructure.GroupDraws;
 
 public interface IGroupDrawRepository
 {
-    //bool SaveChanges();
     Task Add(GroupDraw groupDraw);
+    Task<GroupDraw> Get(Guid id);
 }

@@ -1,4 +1,5 @@
 using AutoFixture.Xunit2;
+using CodeChallenge.WebApi.Infrastructure.Services;
 using CodeChallenge.WebApi.Infrastructure.Teams;
 using SharpTestsEx;
 using System.ComponentModel.DataAnnotations;

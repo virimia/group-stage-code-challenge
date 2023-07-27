@@ -8,6 +8,9 @@ public class Group
     [Required]
     public Guid Id { get; set; }
 
+    [Required]
+    public char Name { get; set; }
+
     public Guid GroupDrawId { get; set; }
     public GroupDraw GroupDraw { get; set; }
 

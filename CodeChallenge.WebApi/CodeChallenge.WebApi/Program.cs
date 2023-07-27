@@ -1,5 +1,9 @@
-using CodeChallenge.WebApi;
 using CodeChallenge.WebApi.Data;
+using CodeChallenge.WebApi.Infrastructure;
+using CodeChallenge.WebApi.Infrastructure.Countries;
+using CodeChallenge.WebApi.Infrastructure.GroupDraws;
+using CodeChallenge.WebApi.Infrastructure.Groups;
+using CodeChallenge.WebApi.Infrastructure.Services;
 using CodeChallenge.WebApi.Infrastructure.Teams;
 using Microsoft.EntityFrameworkCore;
 
@@ -40,5 +44,10 @@ app.Run();
 void RegisterServices(WebApplicationBuilder builder)
 {
     builder.Services.AddTransient<IGroupService, GroupService>();
+    builder.Services.AddTransient<IGroupDrawService, GroupDrawService>();
     builder.Services.AddTransient<ITeamsRepository, TeamsRepository>();
+    builder.Services.AddTransient<ICountriesRepository, CountriesRepository>();
+    builder.Services.AddTransient<IGroupRepository, GroupRepository>();
+    builder.Services.AddTransient<IGroupDrawRepository, GroupDrawRepository>();
+    builder.Services.AddTransient<IDbContextPersister, DbContextPersister>();
 }

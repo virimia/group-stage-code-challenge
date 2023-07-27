@@ -1,4 +1,4 @@
-﻿namespace CodeChallenge.WebApi;
+﻿namespace CodeChallenge.WebApi.Infrastructure.Services;
 
 public interface IGroupService
 {

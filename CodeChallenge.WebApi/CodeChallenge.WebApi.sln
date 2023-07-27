@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeChallenge.WebApi", "CodeChallenge.WebApi\CodeChallenge.WebApi.csproj", "{75BDCBF1-DF17-4ADE-BAE8-7DE8B49C8D21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeChallenge.WebApi.Tests", "CodeChallenge.WebApi.Tests\CodeChallenge.WebApi.Tests.csproj", "{D099BC20-AE1B-42D4-8A9F-7051E31501D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75BDCBF1-DF17-4ADE-BAE8-7DE8B49C8D21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75BDCBF1-DF17-4ADE-BAE8-7DE8B49C8D21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75BDCBF1-DF17-4ADE-BAE8-7DE8B49C8D21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75BDCBF1-DF17-4ADE-BAE8-7DE8B49C8D21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D099BC20-AE1B-42D4-8A9F-7051E31501D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D099BC20-AE1B-42D4-8A9F-7051E31501D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D099BC20-AE1B-42D4-8A9F-7051E31501D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D099BC20-AE1B-42D4-8A9F-7051E31501D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18D1567E-204A-43AF-8096-793542788D91}
+	EndGlobalSection
+EndGlobal

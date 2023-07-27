@@ -15,8 +15,8 @@ public class GroupStageController : ControllerBase
     }
 
     [HttpPost("Generate")]
-    [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
-    [ProducesResponseType(typeof(int), StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(typeof(IEnumerable<GeneratedGroupsResult>), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public IActionResult Generate([FromBody] GroupStageFormModel model)
     {
         if (model.NumberOfGroups != 4 && model.NumberOfGroups != 8)
@@ -29,8 +29,11 @@ public class GroupStageController : ControllerBase
             return BadRequest("DrawMaster must have a name");
         }
 
-        var result = _groupService.Generate(model.NumberOfGroups, model.DrawMaster);
+        var groups = _groupService.Generate(model.NumberOfGroups, model.DrawMaster);
+        var mappedResult = groups.Select(group => new GeneratedGroupResult(
+            group.Name,
+            group.Teams.Select(team => new GeneratedGroupTeam(team.Name))));
 
-        return Ok(result);
+        return Ok(new GeneratedGroupsResult(mappedResult));
     }
 }

@@ -1,5 +1,4 @@
 ﻿using CodeChallenge.WebApi.Models;
-using System.Diagnostics;
 
 namespace CodeChallenge.WebApi;
 
@@ -32,9 +31,6 @@ public class GeneratedGroup
         {
             return false;
         }
-
-        Debug.WriteLine("Adding in Group: {0} , Team: {1}", Name, team.Name);
-        //Console.WriteLine("Adding in Group: {0} , Team: {1}", Name, team.Name);
 
         Teams.Add(team);
         CountryCodes.Add(team.CountryCode);

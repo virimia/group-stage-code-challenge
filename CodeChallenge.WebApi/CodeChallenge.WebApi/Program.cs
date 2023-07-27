@@ -49,5 +49,4 @@ void RegisterServices(WebApplicationBuilder builder)
     builder.Services.AddTransient<ICountriesRepository, CountriesRepository>();
     builder.Services.AddTransient<IGroupRepository, GroupRepository>();
     builder.Services.AddTransient<IGroupDrawRepository, GroupDrawRepository>();
-    builder.Services.AddTransient<IDbContextPersister, DbContextPersister>();
 }
